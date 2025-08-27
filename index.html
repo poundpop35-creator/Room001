@@ -1,5 +1,30 @@
 <!doctype html><html lang="th"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>ค้นหารายชื่อผู้เข้าพัก</title>
+<style>
+  body{font-family:system-ui,'Noto Sans Thai','IBM Plex Sans Thai',sans-serif;background:#f6f9ff;margin:0;color:#0f172a;}
+  
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 14px 16px; }
+  .title { font-weight: 800; font-size: 18px; margin: 2px 0 12px; }
+  /* ฟิลเตอร์เรียงลงมา */
+  .controls { display:grid; gap:10px; grid-template-columns: 1fr; margin-bottom:12px; }
+  .control { display:flex; flex-direction:column; gap:6px; }
+  label { font-size:13px; color:#475569; padding-left:6px; }
+  input, select, button {height: 44px; border:1px solid #dbe3ef; border-radius:12px; padding:0 12px; background:#fff;}
+  /* การ์ด 3 คอลัมน์ */
+  .grid { display:grid; gap:12px; grid-template-columns: repeat(3, 1fr); }
+  .card { background:#fff; border:1px solid #edf2f7; border-radius:16px; padding:14px; box-shadow:0 2px 8px rgba(16,24,40,0.05); }
+  .name { font-weight:700; }
+  .pills { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:10px; }
+  .pill { display:inline-block; padding:8px 14px; border-radius:999px; background:#eaf3ff; border:1px solid #cfe3ff; font-size:14px; }
+  .pill-gray { background:#eef2f7; border-color:#e2e8f0; }
+  .meta { color:#6b7280; font-size: 13px; white-space: pre-line; }
+  .pair { margin-top: 4px; font-size: 13px; white-space: pre-line; }
+  .count { color:#6b7280; font-size: 14px; margin: 10px 0; }
+  @media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+  }
 <title>ค้นหารายชื่อผู้เข้าพัก</title>
 <style>body{font-family:system-ui,'Noto Sans Thai',sans-serif;background:#f6f9ff;margin:0;color:#0f172a;}
   .wrap { max-width: 1200px; margin: 0 auto; padding: 14px 16px; }
